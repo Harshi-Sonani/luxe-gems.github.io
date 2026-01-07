@@ -1,0 +1,157 @@
+/* Responsive Design */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero {
+        padding-top: 140px;
+        padding-bottom: 80px;
+    }
+
+    .blog-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .shop-container {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        margin-bottom: 30px;
+    }
+
+    .blog-listing {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-sidebar {
+        order: -1;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-white);
+        box-shadow: 0 5px 10px var(--shadow);
+        padding: 20px;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    nav.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0 0 15px 0;
+    }
+
+    .header-icons a:not(.mobile-menu-btn) {
+        margin-left: 15px;
+    }
+
+    .products-grid,
+    .categories-grid,
+    .blog-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .shop-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .shop-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .product-detail-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .main-image {
+        height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .btn {
+        padding: 10px 24px;
+    }
+
+    .products-grid,
+    .categories-grid,
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header {
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+
+    .product-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .quantity-selector {
+        align-self: flex-start;
+    }
+
+    .tab-buttons {
+        flex-wrap: wrap;
+    }
+
+    .tab-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
